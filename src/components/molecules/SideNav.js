@@ -2,8 +2,10 @@ import Image from 'next/image'
 import React from 'react'
 import avatar from "@assets/images/avatar/Leslie_Image.png"
 import AppLink from '../organisms/AppLink'
+import { useRouter } from 'next/navigation'
 
 function SideNav() {
+  const router = useRouter()
   return (
     <div className='fixed select-none overflow-y-auto flex flex-col h-screen border-r w-64 gap-y-6 py-8 px-1'>
         <div className='text-2xl px-1'>PROJECT-X</div>
@@ -18,7 +20,10 @@ function SideNav() {
         </div>
         <div className='space-y-2'>
           <AppLink text={"settings"} icon={<i className="ri-settings-3-line"></i>} />
-          <AppLink text={"logout"} icon={<i className="ri-logout-box-r-line"></i>} />
+          <div onClick={()=> {localStorage.screeningAuthState = false}} className={`flex items-center gap-3 py-2 rounded-full text-gray-500 cursor-pointer px-3 hover:bg-[#025C56] hover:bg-opacity-70 hover:text-white`}>
+            <div className='text-2xl'><i className="ri-logout-box-r-line"></i></div>
+            <div className='capitalize flex-grow'>logout</div>
+          </div>
         </div>
         <div className='border-t py-3'>
             <div className='flex items-center gap-2'>

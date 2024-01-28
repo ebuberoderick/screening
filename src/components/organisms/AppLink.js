@@ -14,6 +14,7 @@ function AppLink({text,icon,subMenu}) {
 
     const toggleSibling = (e) => {
         document.getElementById(e).classList.toggle("hidden");
+        console.log(document.getElementById(e).parentElement());
     } 
 
     const checkOpen  = () => {

@@ -10,7 +10,7 @@ function BillList({data}) {
             <div className="">10/10/23</div>
             <div className="">₦15245.66</div>
         </div>
-        <div className="text-xl w-12"><i class="ri-more-2-fill"></i></div>
+        <div className="text-xl w-12"><i className="ri-more-2-fill"></i></div>
     </div>
   )
 }

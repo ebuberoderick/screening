@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 
 function AppLayout({ children }) {
   const router = useRouter()
-  const isAuthenticated = true 
+  const isAuthenticated = localStorage.screeningAuthState
 
   if (!isAuthenticated) {
     router.push("/auth/login")
