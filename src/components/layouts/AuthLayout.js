@@ -8,7 +8,7 @@ function AuthLayout({children}) {
   const isAuthenticated = false 
 
   if (isAuthenticated) {
-    router.push("/auth/login")
+    router.push("/overview")
   }
   return (
     <div className='h-screen w-screen bg-gray-100 flex items-center'>
