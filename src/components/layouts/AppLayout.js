@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 
 function AppLayout({ children }) {
   const router = useRouter()
-  const isAuthenticated = false 
+  const isAuthenticated = true 
 
   if (!isAuthenticated) {
     router.push("/auth/login")

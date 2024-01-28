@@ -1,8 +1,10 @@
 import AppLayout from '@/components/layouts/AppLayout'
+import BillList from '@/components/organisms/BillList'
 import Link from 'next/link'
 import React from 'react'
 
 function page() {
+  const billsSummary = ["Robert McBrown","Big Kahuna Burger Ltd.","Biffco Enterprises Ltd.","Binford Ltd.","Robert & Sons","Acme Co.","Robert McBrown","Barone LLC.","Robert McBrown"]
   return (
     <AppLayout>
       <div className="space-y-8">
@@ -63,7 +65,25 @@ function page() {
               <div className="text-lg"><i class="ri-arrow-down-s-line"></i></div>
             </div>
           </div>
-          <div className=""></div>
+          <div className="divide-y">
+            <div className="flex py-3 items-center w-full text-gray-400 text-sm">
+              <div className="flex-grow grid items-center grid-cols-5">
+                <div className="flex items-center gap-2"><input type="checkbox" /> Bill number</div>
+                <div className="">Supplier</div>
+                <div className="">Date issued</div>
+                <div className="">Due date</div>
+                <div className="">Amount</div>
+              </div>
+              <div className=" w-12">Action</div>
+            </div>
+            {
+              billsSummary.map((data,index) => (
+                <div className="" key={index}>
+                  <BillList data={data} />
+                </div>
+              ))
+            }
+          </div>
         </div>
       </div>
     </AppLayout>
