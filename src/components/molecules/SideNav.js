@@ -20,9 +20,9 @@ function SideNav() {
         </div>
         <div className='space-y-2'>
           <AppLink text={"settings"} icon={<i className="ri-settings-3-line"></i>} />
-          <div onClick={()=> {localStorage.screeningAuthState = false}} className={`flex items-center gap-3 py-2 rounded-full text-gray-500 cursor-pointer px-3 hover:bg-[#025C56] hover:bg-opacity-70 hover:text-white`}>
-            <div className='text-2xl'><i className="ri-logout-box-r-line"></i></div>
-            <div className='capitalize flex-grow'>logout</div>
+          <div onClick={()=> {router.push("/auth/login")}} className={`flex items-center gap-3 py-2 rounded-full text-gray-500 cursor-pointer px-3 hover:bg-[#025C56] hover:bg-opacity-70 hover:text-white`}>
+              <div className='text-2xl'><i className="ri-logout-box-r-line"></i></div>
+              <div className='capitalize flex-grow'>logout</div>
           </div>
         </div>
         <div className='border-t py-3'>

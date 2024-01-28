@@ -4,17 +4,15 @@ import React from 'react'
 
 function AuthLayout({children}) {
   const router = useRouter()
-  const isAuthenticated = localStorage.screeningAuthState  
+  // const isAuthenticated = localStorage.screeningAuthState  
 
-  if (isAuthenticated) {
-    router.push("/overview")
-  }
+  // if (isAuthenticated) {
+  //   router.push("/overview")
+  // }
 
   const submitForm = (e) => {
     e.preventDefault()
-    if (localStorage.screeningAuthState = true) {
-      router.push("/overview")
-    }
+    router.push("/overview")
   }
   return (
     <div className='h-screen w-screen bg-gray-100 flex items-center'>

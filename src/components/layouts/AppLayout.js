@@ -5,11 +5,11 @@ import { useRouter } from 'next/navigation'
 
 function AppLayout({ children }) {
   const router = useRouter()
-  const isAuthenticated = localStorage.screeningAuthState
+  // const isAuthenticated = localStorage.screeningAuthState
 
-  if (!isAuthenticated) {
-    router.push("/auth/login")
-  }
+  // if (!isAuthenticated) {
+  //   router.push("/auth/login")
+  // }
   return (
     <div>
         <SideNav />
