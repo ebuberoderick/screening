@@ -67,7 +67,7 @@ function AppLink({text,icon,subMenu}) {
                                                       subText.option.map((e,i)=>(
                                                         <div key={e+i}>
                                                             <Link href={`/${text}/${subText.name}/${e}`}>
-                                                                <div className='hover:text-green-600 py-1'>{e}</div>
+                                                                <div className='hover:text-[#025C56] py-1'>{e}</div>
                                                             </Link>
                                                         </div>
                                                       ))  
@@ -76,7 +76,7 @@ function AppLink({text,icon,subMenu}) {
                                             </div>
                                     ) : (
                                         <Link href={`/${text}/${subText.name}`}>
-                                            <div className={`flex py-2 items-center gap-3 text-gray-500 ${activeSub === subText.name ? "text-[#025C56] font-bold" : "hover:text-[16px] hover:font-bold hover:text-[#025C56]"}`}>
+                                            <div className={`flex py-2 items-center gap-3 text-gray-500 ${activeSub === subText.name ? "text-[#57aaa5] font-bold" : "hover:text-[16px] hover:font-bold hover:text-[#025C56]"}`}>
                                                 <div className='capitalize flex-grow'>{subText.name}</div>
                                             </div>
                                         </Link>

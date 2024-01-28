@@ -1,11 +1,17 @@
 'use client'
 import AppLayout from '@/components/layouts/AppLayout'
+import AppoverChip from '@/components/molecules/AppoverChip'
+import ProductDetailChip from '@/components/molecules/ProductDetailChip'
+import AppDatePicker from '@/components/organisms/AppDatePicker'
 import AppInput from '@/components/organisms/AppInput'
 import AppSelect from '@/components/organisms/AppSelect'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 function Page() {
+
+    const [approver,setApprover] = useState(["",""])
+    const [product,setProduct] = useState([""])
 
   return (
     <AppLayout>
@@ -32,21 +38,58 @@ function Page() {
                     <AppInput label="Payment terms" />
                     <AppInput label="Billing Address" />
                     <AppInput label="Bill description (Optional)" />
+                    <AppDatePicker label="Date issued" />
+                    <AppDatePicker label="Due date" />
+                </div>
+            </div>
+        
+            <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                    <div className="flex-grow text-lg font-bold">Product details</div>
+                </div>
+                <div className="space-y-6">
+                    <div className="grid text-gray-400 grid-cols-5 gap-8">
+                        <div className="">Description</div>
+                        <div className="">Quantity</div>
+                        <div className="">Unit Price</div>
+                        <div className="">Tax</div>
+                        <div className="">Amount</div>
+                    </div>
+                    <div className="divide-y">
+                        {
+                            product.map((el,ind) => (
+                                <div className="" key={ind}>
+                                    <ProductDetailChip />
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <div onClick={()=> setProduct([...product,""])} className="flex items-center gap-2 cursor-pointer text-teal-500">
+                        <div className="text-lg"><i className="ri-add-fill"></i></div>
+                        <div className="">Add item</div>
+                    </div>
                 </div>
             </div>
             
             <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                    <div className="flex-grow text-lg font-bold">Product details</div>
-                </div>
-                <div className=""></div>
-            </div>
-        
-            <div className="space-y-4">
-                <div className="flex items-center gap-4">
                     <div className="flex-grow text-lg font-bold">Approver</div>
                 </div>
-                <div className=""></div>
+                <div className="space-y-2">
+                    <div className="divide-y">
+                        {
+                            approver.map((e,i) => (
+                                <div className="" key={i}>
+                                    <AppoverChip />
+                                </div>
+                            ))
+                        }
+                    </div>
+                    <div onClick={()=> setApprover([...approver,""])} className="flex items-center gap-2 cursor-pointer text-teal-500">
+                        <div className="text-lg"><i className="ri-add-fill"></i></div>
+                        <div className="">Add new approver</div>
+                    </div>
+                </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
