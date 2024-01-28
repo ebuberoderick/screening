@@ -2,6 +2,7 @@ import React from 'react'
 import SideNav from '../molecules/SideNav'
 
 function AppLayout({ children }) {
+  
   return (
     <div>
         <SideNav />

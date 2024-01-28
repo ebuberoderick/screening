@@ -37,7 +37,7 @@ function AppLink({text,icon,subMenu}) {
                     <div onClick={()=> openSubMenu()} className={`flex items-center gap-3 py-2 rounded-full text-gray-500 cursor-pointer px-3 ${active === text ? "text-white bg-[#025C56] rounded-full" : "hover:bg-[#025C56] hover:bg-opacity-70 hover:text-white"}`}>
                         <div className='text-2xl'>{icon}</div>
                         <div className='capitalize flex-grow'>{text}</div>
-                        <div className='text-2xl'>{(subMenu && subMenu.length > 0) && (<i className="ri-arrow-right-s-line"></i>)}</div>
+                        <div className={`text-2xl transform transition-all duration-300`}>{(subMenu && subMenu.length > 0) && (<i className="ri-arrow-right-s-line"></i>)}</div>
                     </div>
                 ) :
                 (
@@ -45,7 +45,6 @@ function AppLink({text,icon,subMenu}) {
                         <div className={`flex items-center gap-3 py-2 rounded-full text-gray-500 cursor-pointer px-3 ${active === text ? "text-white bg-[#025C56] rounded-full" : "hover:bg-[#025C56] hover:bg-opacity-70 hover:text-white"}`}>
                             <div className='text-2xl'>{icon}</div>
                             <div className='capitalize flex-grow'>{text}</div>
-                            <div className='text-2xl'>{(subMenu && subMenu.length > 0) && (<i className="ri-arrow-right-s-line"></i>)}</div>
                         </div>
                     </Link>
                 )
@@ -60,7 +59,7 @@ function AppLink({text,icon,subMenu}) {
                                             <div>
                                                 <div onClick={() => toggleSibling(subText.name)} className={`flex py-1 items-center gap-3 text-gray-500 cursor-pointer ${activeSub === subText.name ? "text-[#025C56] font-bold" : "hover:text-[16px] hover:font-bold hover:text-[#025C56]"}`}>
                                                     <div className='capitalize flex-grow'>{subText.name}</div>
-                                                    <div className='text-2xl'><i className="ri-arrow-right-s-line"></i></div>
+                                                    <div className='text-2xl transform transition-all duration-300'><i className="ri-arrow-right-s-line"></i></div>
                                                 </div>
                                                 <div className='pl-6 space-y-2 hidden' id={subText.name}>
                                                     {

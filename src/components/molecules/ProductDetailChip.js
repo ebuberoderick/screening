@@ -5,7 +5,7 @@ import AppSelect from '../organisms/AppSelect'
 function ProductDetailChip() {
   return (
     <div>
-        <div className="grid grid-cols-5 gap-8">
+        <div className="grid grid-cols-5 gap-8 py-6">
             <div className="flex gap-4 items-center">
                 <i class="ri-menu-line"></i>
                 <AppSelect options={["Generator","Television","Radio"]} />

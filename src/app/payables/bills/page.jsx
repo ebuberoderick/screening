@@ -54,11 +54,11 @@ function page() {
         <div className="space-y-4">
           <div className="flex items-center gap-4">
             <div className="flex-grow text-lg">Bills summary</div>
-            <div className="border flex items-center gap-2 rounded-md text-xs text-gray-500 p-2 px-4">
+            <div className="border cursor-pointer flex items-center gap-2 rounded-md text-xs text-gray-500 p-2 px-4">
               <div className="text-lg"><i class="ri-filter-3-fill"></i></div>
               <div className="">Filter</div>
             </div>
-            <div className="border flex items-center gap-2 rounded-md text-xs text-gray-500 p-2 px-4">
+            <div className="border cursor-pointer flex items-center gap-2 rounded-md text-xs text-gray-500 p-2 px-4">
               <div className="">Export</div>
               <div className="text-lg"><i class="ri-arrow-down-s-line"></i></div>
             </div>

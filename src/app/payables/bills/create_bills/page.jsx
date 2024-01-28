@@ -47,7 +47,7 @@ function Page() {
                 <div className="flex items-center gap-4">
                     <div className="flex-grow text-lg font-bold">Product details</div>
                 </div>
-                <div className="space-y-6">
+                <div className="space-y-2">
                     <div className="grid text-gray-400 grid-cols-5 gap-8">
                         <div className="">Description</div>
                         <div className="">Quantity</div>
@@ -64,9 +64,11 @@ function Page() {
                             ))
                         }
                     </div>
-                    <div onClick={()=> setProduct([...product,""])} className="flex items-center gap-2 cursor-pointer text-teal-500">
-                        <div className="text-lg"><i className="ri-add-fill"></i></div>
-                        <div className="">Add item</div>
+                    <div className="flex">
+                        <span onClick={()=> setProduct([...product,""])} className="flex items-center gap-2 cursor-pointer text-teal-500">
+                            <div className="text-lg"><i className="ri-add-fill"></i></div>
+                            <div className="">Add item</div>
+                        </span>
                     </div>
                 </div>
             </div>
