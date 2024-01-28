@@ -1,10 +1,15 @@
+'use client'
 import React from 'react'
 import SideNav from '../molecules/SideNav'
+import { useRouter } from 'next/navigation'
 
 function AppLayout({ children }) {
+  const router = useRouter()
+  const isAuthenticated = false 
 
-  
-
+  if (!isAuthenticated) {
+    router.push("/auth/login")
+  }
   return (
     <div>
         <SideNav />
