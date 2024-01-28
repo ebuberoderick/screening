@@ -1,8 +1,10 @@
-'use client'
-import { useRouter } from "next/navigation";
+import AppLayout from '@/components/layouts/AppLayout'
+import React from 'react'
 
-export default function Home() {
-  const router = useRouter()
-  router.push("/overview")
-  return null
+function page() {
+  return (
+    <AppLayout>page</AppLayout>
+  )
 }
+
+export default page
